@@ -43,3 +43,5 @@ Install [Vagrant](https://www.vagrantup.com/)
 [Integrating Nginx and a Shibboleth SP with FastCGI](https://wiki.shibboleth.net/confluence/display/SHIB2/Integrating+Nginx+and+a+Shibboleth+SP+with+FastCGI)
 
 https://github.com/jitsi/jicofo/blob/master/doc/shibboleth.md
+
+[NGINX with nginx-http-shibboleth module - Dockerfiles](https://github.com/criluc/docker-nginx-http-shibboleth)

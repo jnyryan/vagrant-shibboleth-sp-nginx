@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" entityID="https://stage.fed.huit.harvard.edu/idp/shibboleth">
+
+    <IDPSSODescriptor WantAuthnRequestsSigned="true" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">harvard.edu</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDUzCCAjugAwIBAgIUJcTvme48mQsh3hTlW12YrlFF4FwwDQYJKoZIhvcNAQEF
+BQAwJTEjMCEGA1UEAxMac3RhZ2UuZmVkLmh1aXQuaGFydmFyZC5lZHUwHhcNMTMw
+ODA3MTQ1MDI2WhcNMTYwODA3MTQ1MDI2WjAlMSMwIQYDVQQDExpzdGFnZS5mZWQu
+aHVpdC5oYXJ2YXJkLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AKVglbncXNVEk/ZfrHC968S5ZCkh9w1bptk/nQ7LKbBpT+HddzpQnERcm+9jK87D
+KXTtSdlF4kLHzpHc2TmAiZSu0bChwkLPMV9hFfvjQwUHoJNqpg/BEeC2D9tkbgD3
+JTXleOylnANUtZ3PRZ5YTNjroc0hsI+AqAXOdn3Wc0cCi+msDKfecyW32SGG3Cql
+x3uhYKUp80II05NzcaSUqkijjHXpPATO1oFcLcSmkWU7KM88vvdkk3RxvfqWLtj0
+iLvipNc3Qbpn9EqQ7WoE55sVqpJZIxHApy7scCwFHm1rJQFqdTy64AcYY2xwpFCq
+w0HFoNGJQuTBi160BQC5MukCAwEAAaN7MHkwWAYDVR0RBFEwT4Iac3RhZ2UuZmVk
+Lmh1aXQuaGFydmFyZC5lZHWGMWh0dHBzOi8vc3RhZ2UuZmVkLmh1aXQuaGFydmFy
+ZC5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFAjCoEMZjUnBebcM9C4QpNGC
+/QxWMA0GCSqGSIb3DQEBBQUAA4IBAQAXxdC9hEZcxiMVq/HRMhcDGwpAw6cOS0SW
+3fNKLKWyy0UdYCbIyXO3Hez4oCTqZQvAwnl6vCGMeMKPm8f3eWPq67TVDTncwFvi
+scgn5UnBk2mtUv+Q05AWZzRTVJoYHLWcO2xBNMiuB8kmVL2gRnrqXDwD/MJoMZk0
+DcVnFTLcGu6QDXeZ+lCGBl5BMJiwke0yvXQwe4nSX2ITORQHNHbNlNtXMSL0F2QY
+ETOw/HoBk14EcLfjwDVvaGEhVdDUiA2gzzObTSgpcFtKxLvq8zQGb6H9SXB0aDAS
+4VPCpdP5/ByMnf/pWq8XpDLIzwhpve5aqoFn/jC5QudWv1E7gSFd
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://stage.fed.huit.harvard.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://stage.fed.huit.harvard.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stage.fed.huit.harvard.edu/idp/profile/SAML2/Redirect/SLO" />
+
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stage.fed.huit.harvard.edu/idp/profile/SAML2/POST/SLO" />
+
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://stage.fed.huit.harvard.edu:8443/idp/profile/SAML2/SOAP/SLO" />
+
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+
+        <SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://stage.fed.huit.harvard.edu/idp/profile/Shibboleth/SSO"/>
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://stage.fed.huit.harvard.edu/idp/profile/SAML2/POST/SSO"/>
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://stage.fed.huit.harvard.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://stage.fed.huit.harvard.edu/idp/profile/SAML2/Redirect/SSO"/>
+    </IDPSSODescriptor>
+
+    <AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">harvard.edu</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDUzCCAjugAwIBAgIUJcTvme48mQsh3hTlW12YrlFF4FwwDQYJKoZIhvcNAQEF
+BQAwJTEjMCEGA1UEAxMac3RhZ2UuZmVkLmh1aXQuaGFydmFyZC5lZHUwHhcNMTMw
+ODA3MTQ1MDI2WhcNMTYwODA3MTQ1MDI2WjAlMSMwIQYDVQQDExpzdGFnZS5mZWQu
+aHVpdC5oYXJ2YXJkLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AKVglbncXNVEk/ZfrHC968S5ZCkh9w1bptk/nQ7LKbBpT+HddzpQnERcm+9jK87D
+KXTtSdlF4kLHzpHc2TmAiZSu0bChwkLPMV9hFfvjQwUHoJNqpg/BEeC2D9tkbgD3
+JTXleOylnANUtZ3PRZ5YTNjroc0hsI+AqAXOdn3Wc0cCi+msDKfecyW32SGG3Cql
+x3uhYKUp80II05NzcaSUqkijjHXpPATO1oFcLcSmkWU7KM88vvdkk3RxvfqWLtj0
+iLvipNc3Qbpn9EqQ7WoE55sVqpJZIxHApy7scCwFHm1rJQFqdTy64AcYY2xwpFCq
+w0HFoNGJQuTBi160BQC5MukCAwEAAaN7MHkwWAYDVR0RBFEwT4Iac3RhZ2UuZmVk
+Lmh1aXQuaGFydmFyZC5lZHWGMWh0dHBzOi8vc3RhZ2UuZmVkLmh1aXQuaGFydmFy
+ZC5lZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFAjCoEMZjUnBebcM9C4QpNGC
+/QxWMA0GCSqGSIb3DQEBBQUAA4IBAQAXxdC9hEZcxiMVq/HRMhcDGwpAw6cOS0SW
+3fNKLKWyy0UdYCbIyXO3Hez4oCTqZQvAwnl6vCGMeMKPm8f3eWPq67TVDTncwFvi
+scgn5UnBk2mtUv+Q05AWZzRTVJoYHLWcO2xBNMiuB8kmVL2gRnrqXDwD/MJoMZk0
+DcVnFTLcGu6QDXeZ+lCGBl5BMJiwke0yvXQwe4nSX2ITORQHNHbNlNtXMSL0F2QY
+ETOw/HoBk14EcLfjwDVvaGEhVdDUiA2gzzObTSgpcFtKxLvq8zQGb6H9SXB0aDAS
+4VPCpdP5/ByMnf/pWq8XpDLIzwhpve5aqoFn/jC5QudWv1E7gSFd
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+
+        <AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://stage.fed.huit.harvard.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+
+        <AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://stage.fed.huit.harvard.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+
+    </AttributeAuthorityDescriptor>
+
+</EntityDescriptor>
