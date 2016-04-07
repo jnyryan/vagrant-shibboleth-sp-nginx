@@ -7,7 +7,7 @@ An example shibboleth Service Provider that running on nginx and Ubuntu.
 This is an automated process to set up Shibboleth Service Provider on a
 virtual machine hosted in VirtualBox.
 
-Once completed you will have a hosted website [https://localhost:50080/secure](https://localhost:51080/secure)
+Once completed you will have a hosted website [https://localhost:50080/secure](https://localhost:50080/secure)
 that redirects to Harvard IdP. Since Harvard do not know who we are, they will
 throw an error, but the demo will prove we have set up Shibboleth correctly and
 you can alter the IdP as required.
@@ -32,7 +32,9 @@ Install [Vagrant](https://www.vagrantup.com/)
 
 ## Setup
 
-
+```
+vagrant up --provider=virtualbox
+```
 
 ## Troubleshooting
 
@@ -42,6 +44,6 @@ Install [Vagrant](https://www.vagrantup.com/)
 
 [Integrating Nginx and a Shibboleth SP with FastCGI](https://wiki.shibboleth.net/confluence/display/SHIB2/Integrating+Nginx+and+a+Shibboleth+SP+with+FastCGI)
 
-https://github.com/jitsi/jicofo/blob/master/doc/shibboleth.md
+[NGINX with nginx-http-shibboleth](https://github.com/jitsi/jicofo/blob/master/doc/shibboleth.md)
 
 [NGINX with nginx-http-shibboleth module - Dockerfiles](https://github.com/criluc/docker-nginx-http-shibboleth)
