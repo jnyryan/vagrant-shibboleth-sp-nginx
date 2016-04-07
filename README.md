@@ -1,4 +1,4 @@
-# vagrant-shibboleth-sp
+# vagrant-shibboleth-sp-nginx
 
 An example shibboleth Service Provider that running on nginx and Ubuntu.
 
