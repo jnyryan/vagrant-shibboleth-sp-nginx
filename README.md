@@ -4,13 +4,36 @@ An example Shibboleth Service Provider running on nginx and Ubuntu.
 
 ## Overview
 
-This is an automated process to set up Shibboleth Service Provider on a
-virtual machine hosted in VirtualBox.
-
 Once completed you will have a hosted website [https://localhost:50080/secure](https://localhost:50080/secure)
 that redirects to Harvard IdP. Since Harvard do not know who we are, they will
 throw an error, but the demo will prove we have set up Shibboleth correctly and
 you can alter the IdP as required.
+
+***TODO's***
+
+- Haven't configured the secure_site correctly yet.
+
+
+## Prerequisites
+
+You'll need both these to get going.
+
+- Install [git - the source control tool ](https://git-scm.com/downloads)
+- Install [VirtualBox - free virtualization software ](https://www.virtualbox.org/wiki/Downloads)
+- Install [Vagrant - a tool easily manage and create virtual machines from online images ](https://www.vagrantup.com/)
+
+## Usage
+
+```
+git clone https://github.com/jnyryan/vagrant-shibboleth-sp-nginx.git && cd vagrant-shibboleth-sp-nginx
+vagrant up --provider=virtualbox
+```
+
+Browse to
+  - localhost://50080
+  - localhost://50443
+
+## Under the hood
 
 It uses ```vagrant up``` to do 2 things
 
@@ -23,22 +46,11 @@ Then, uses the [install script](./install.sh) which does most of the heavy work:
 - Downloads/installs Shibboleth and its dependencies
 - Configures Shibboleth to use an external IdP
 
-## Prerequisites
-
-You'll need both these free apps to get going.
-
-Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-Install [Vagrant](https://www.vagrantup.com/)
-
-## Setup
-
-```
-vagrant up --provider=virtualbox
-```
-
-## Troubleshooting
-
 ## References
+
+This document is based on the hard work of others before me, so here's where I got my info from.
+
+*Thanks to you all.*
 
 [Shibboleth Home](https://shibboleth.net/)
 
